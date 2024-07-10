@@ -37,7 +37,7 @@ substitutions:
     # See https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values
     # for more information.
     _BUILD_FLAVOR: prod # Default. Use nonprod for enhanced logging output.
-    _GCP_IMAGE_TAG: ${GIT_TAG} # Default. Useful for organization.
+    _GCP_IMAGE_TAG: ${BUILD_ID} # Default. Required for server deployment later.
     _GCP_IMAGE_REPO: us-docker.pkg.dev/${PROJECT_ID}/kvs-docker-repo-shared/kv-service # Default. Artifact Registry repo to house images.
 timeout: 10800s
 options:
